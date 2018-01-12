@@ -3,3 +3,7 @@
 {{#if isAuthenticated}}
   {{study-components/comment-form newComment='newComment'}}
 {{/if}}
+
+{{#each study.comments as |comment|}}
+  {{study-components/comment comment=comment}}
+{{/each}}
