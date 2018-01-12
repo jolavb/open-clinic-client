@@ -9,7 +9,8 @@ export default Ember.Route.extend({
   actions: {
     newComment(comment){
       // create new comment here
-      console.log(comment)
+      let newComment = this.get('store').createRecord('comment',comment);
+      newComment.save();
     },
   }
 });

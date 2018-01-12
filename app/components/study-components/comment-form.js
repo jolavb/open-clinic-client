@@ -1,9 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  comment: null,
+  comment: {
+    text: null,
+    nctId: null
+  },
   actions: {
-    newComment(comment) {
+    newComment(study) {
+      this.set('comment.nctId', study.id)
       this.sendAction('newComment', this.get('comment'))
     },
   },

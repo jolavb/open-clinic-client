@@ -1,7 +1,7 @@
 <h3> Comments </h3>
 {{study-components/comment}}
 {{#if isAuthenticated}}
-  {{study-components/comment-form newComment='newComment'}}
+  {{study-components/comment-form newComment='newComment' study=study}}
 {{/if}}
 
 {{#each study.comments as |comment|}}
