@@ -1,2 +1,8 @@
 <h1> Studies </h1>
-{{study-components/study}}
+
+{{#each model as |study|}}
+  <tr>
+    <td> {{study.officialTitle}} </td>
+    <td> {{#link-to 'study' study}} Details{{/link-to}} </td>
+  </tr>
+{{/each}}
