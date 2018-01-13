@@ -1,9 +1,13 @@
 <h3> Comments </h3>
+<div class='newComment'>
 {{study-components/comment}}
-{{#if isAuthenticated}}
-  {{study-components/comment-form newComment='newComment' study=study}}
-{{/if}}
+  {{#if isAuthenticated}}
+    {{study-components/comment-form newComment='newComment' study=study}}
+  {{/if}}
+</div>
 
-{{#each study.comments as |comment|}}
-  {{study-components/comment comment=comment}}
-{{/each}}
+<div class='comments'>
+  {{#each study.comments as |comment|}}
+    {{study-components/comment comment=comment deleteComment='deleteComment'}}
+  {{/each}}
+</div>

@@ -12,5 +12,8 @@ export default Ember.Route.extend({
       let newComment = this.get('store').createRecord('comment',comment);
       newComment.save();
     },
+    deleteComment(comment) {
+      comment.destroyRecord()
+    },
   }
 });
