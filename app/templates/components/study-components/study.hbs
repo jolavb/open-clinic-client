@@ -1,2 +1,62 @@
 {{!-- study component hbs --}}
-{{study.officialTitle}}
+<h1>{{study.officialTitle}}</h1>
+
+<table class='table table-dark'>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td>{{study.studyType}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Phase</th>
+      <td>{{study.phase}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Status</th>
+      <td>{{study.overallStatus}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Enrollment</th>
+      <td>{{study.enrollment}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Enrollment Type</th>
+      <td>{{study.enrollmentType}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Source</th>
+      <td>{{study.source}}</td>
+    </tr>
+    <tr>
+      <th scope="row">FDA Regulated Drug</th>
+      <td>{{study.isFdaRegulatedDrug}}</td>
+    </tr>
+    <tr>
+      <th scope="row">FDA Regulated Device</th>
+      <td>{{study.isFdaRegulatedDevice}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Target Duration</th>
+      <td>{{study.targetDuration}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Primary Completion Date</th>
+      <td>{{study.primaryCompletionDate}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Baseline Population</th>
+      <td>{{study.baselinePopulation}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Processed</th>
+      <td>{{study.nlmDownloadDateDescription}}</td>
+    </tr>
+
+  </tbody>
+</table>
