@@ -1,2 +1,13 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+
+.comment {
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  > .edits {
+      text-align: right;
+  }
+}

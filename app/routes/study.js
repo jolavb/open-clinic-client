@@ -15,5 +15,8 @@ export default Ember.Route.extend({
     deleteComment(comment) {
       comment.destroyRecord();
     },
+    editComment(comment) {
+      comment.save();
+    }
   }
 });

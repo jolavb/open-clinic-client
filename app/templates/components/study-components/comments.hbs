@@ -8,6 +8,6 @@
 
 <div class='comments'>
   {{#each study.comments as |comment|}}
-    {{study-components/comment comment=comment deleteComment='deleteComment'}}
+    {{study-components/comment comment=comment editComment= 'editComment' deleteComment='deleteComment'}}
   {{/each}}
 </div>
