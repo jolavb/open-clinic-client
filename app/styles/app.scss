@@ -3,11 +3,42 @@
 
 
 .comment {
+  position: relative;
   border: 1px solid grey;
   border-radius: 12px;
   padding: 10px;
   margin: 10px;
   > .edits {
-      text-align: right;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
+  > .comment-body{
+    width: 80%;
+    float: right;
+  }
+}
+
+.form-inline {
+  white-space: pre-wrap;
+  width:inherit;
+  > .form-control {
+    width: 100%;
+  }
+}
+
+textarea {
+  width:100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.user-info {
+  float:left;
+  text-align: center;
+  width:20%;
 }
