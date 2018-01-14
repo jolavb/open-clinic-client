@@ -8,10 +8,10 @@ export default Ember.Component.extend({
 
   actions: {
     newComment(comment) {
-      this.sendAction('newComment', comment)
+      this.sendAction('newComment', comment);
     },
     deleteComment(comment) {
-      this.sendAction('deleteComment', comment)
+      this.sendAction('deleteComment', comment);
     },
   }
 });
