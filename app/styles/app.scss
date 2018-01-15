@@ -1,7 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-
 .comment {
   position: relative;
   border: 1px solid grey;
@@ -43,3 +42,5 @@ textarea {
   text-align: center;
   width:20%;
 }
+
+@import "ember-power-select";

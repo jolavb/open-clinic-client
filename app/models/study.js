@@ -1,10 +1,13 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  officialTitle: DS.attr('string'),
-  briefTitle: DS.attr('string'),
+  // Relationships
+  sponsors: DS.hasMany('sponsor'),
   comments: DS.hasMany('comment'),
   responsibleParty: DS.hasMany('responsible-party'),
+
+  officialTitle: DS.attr('string'),
+  briefTitle: DS.attr('string'),
   studyType: DS.attr('string'),
   baselinePopulation: DS.attr('string'),
   overallStatus: DS.attr('string'),
