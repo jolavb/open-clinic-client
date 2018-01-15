@@ -3,7 +3,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-      // Ember Assumes the endpoint is the plural of  the referenced model ('lists') /id
+    console.log()
     return this.get('store').findRecord('study', params.study_id);
   },
   actions: {
@@ -17,6 +17,7 @@ export default Ember.Route.extend({
     },
     editComment(comment) {
       comment.save();
-    }
+    },
+
   }
 });

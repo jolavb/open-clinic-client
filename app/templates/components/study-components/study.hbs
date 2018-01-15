@@ -2,10 +2,9 @@
 <h1>{{study.officialTitle}}</h1>
 
 <table class='table table-dark'>
-  <thead>
+  <thead {{action 'toggleHidden'}}>
     <tr>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col" colspan='2'><h3>General Info</h3></th>
     </tr>
   </thead>
   <tbody>
@@ -57,6 +56,39 @@
       <th scope="row">Processed</th>
       <td>{{study.nlmDownloadDateDescription}}</td>
     </tr>
-
   </tbody>
 </table>
+
+{{#each study.responsibleParty as |party|}}
+{{#if party.name}}
+<table class='table table-dark'>
+  <thead>
+    <tr>
+      <th scope="col" colspan='2'><h3>Responsible Party</h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td>{{party.name}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Party Type</th>
+      <td>{{party.responsiblePartyType}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Title</th>
+      <td>{{party.title}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Organization</th>
+      <td>{{party.organization}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Affiliation</th>
+      <td>{{party.affiliation}}</td>
+    </tr>
+  </tbody>
+</table>
+{{/if}}
+{{/each}}

@@ -4,6 +4,7 @@ export default DS.Model.extend({
   officialTitle: DS.attr('string'),
   briefTitle: DS.attr('string'),
   comments: DS.hasMany('comment'),
+  responsibleParty: DS.hasMany('responsible-party'),
   studyType: DS.attr('string'),
   baselinePopulation: DS.attr('string'),
   overallStatus: DS.attr('string'),
