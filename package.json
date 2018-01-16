@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "bootstrap-select": "^1.12.4",
-    "ember-bootstrap-select": "^0.1.2"
+    "ember-bootstrap-select": "^0.1.2",
+    "ember-cli-spinner": "0.0.9"
   }
 }

@@ -18,6 +18,10 @@
   }
 }
 
+.spinner {
+  background: rgba(68,68,68,.7);
+}
+
 .form-inline {
   white-space: pre-wrap;
   width:inherit;
@@ -43,4 +47,6 @@ textarea {
   width:20%;
 }
 
+$ember-power-select-multiple-selection-background-color: #009688 !default;
+$ember-power-select-multiple-selection-color: #ffffff !default
 @import "ember-power-select";

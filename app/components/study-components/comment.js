@@ -16,11 +16,11 @@ export default Ember.Component.extend({
       this.sendAction('deleteComment', comment);
     },
     editComment() {
-      this.sendAction('editComment', this.get('comment'))
-      this.set('editable', false)
+      this.sendAction('editComment', this.get('comment'));
+      this.set('editable', false);
     },
     toggleEditable() {
-      this.set('editable', true)
+      this.set('editable', true);
     }
   },
 });
