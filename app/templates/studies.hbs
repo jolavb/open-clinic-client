@@ -1,0 +1,10 @@
+{{search-form phases=phases searchStudies='searchStudies'}}
+
+
+<h1> Studies </h1>
+{{#each model as |study|}}
+  <tr>
+    <td> {{study.officialTitle}} </td>
+    <td> {{#link-to 'study' study}}Details{{/link-to}} </td>
+  </tr>
+{{/each}}

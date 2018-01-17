@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   actions: {
-    signOut () {
+   signOut () {
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
         .then(() => this.transitionTo('sign-in'))

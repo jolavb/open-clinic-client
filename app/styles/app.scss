@@ -1,2 +1,52 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+.comment {
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  > .edits {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  > .comment-body{
+    width: 80%;
+    float: right;
+  }
+}
+
+.spinner {
+  background: rgba(68,68,68,.7);
+}
+
+.form-inline {
+  white-space: pre-wrap;
+  width:inherit;
+  > .form-control {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+textarea {
+  width:100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.user-info {
+  float:left;
+  text-align: center;
+  width:20%;
+}
+
+$ember-power-select-multiple-selection-background-color: #009688 !default;
+$ember-power-select-multiple-selection-color: #ffffff !default
+@import "ember-power-select";
