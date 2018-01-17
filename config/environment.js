@@ -50,7 +50,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/open-clincial-client';
+    ENV.rootURL = '/open-clinic-client';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://frozen-mountain-71553.herokuapp.com/';
   }
