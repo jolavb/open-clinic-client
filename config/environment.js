@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/open-clinic-client';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://frozen-mountain-71553.herokuapp.com/';
+    ENV.apiHost = 'https://frozen-mountain-71553.herokuapp.com';
   }
 
   return ENV;
