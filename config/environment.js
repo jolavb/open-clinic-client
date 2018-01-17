@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'open-clinical-client',
+    modulePrefix: 'open-clinic-client',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
-import ENV from 'open-clinical-client/config/environment';
+import ENV from 'open-clinic-client/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,

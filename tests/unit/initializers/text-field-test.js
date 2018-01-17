@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import TextFieldInitializer from 'open-clinical-client/initializers/text-field';
+import TextFieldInitializer from 'open-clinic-client/initializers/text-field';
 import { module, test } from 'qunit';
 
 let application;

@@ -1,4 +1,4 @@
-import ENV from 'open-clinical-client/config/environment';
+import ENV from 'open-clinic-client/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';
