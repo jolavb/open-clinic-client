@@ -1,6 +1,5 @@
 
-{{#power-select-multiple options=phases selected=phase placeholder='Select Phase' onchange=(action (mut phase)) as |phase|}}
+{{#power-select-multiple options=search.phases selected=phase placeholder="Filter by Phase" onchange=(action (mut phase)) as |phase|}}
   {{phase}}
 {{/power-select-multiple}}
-
-<button class='btn btn-default' {{action 'searchStudies' phase}}> Search </button>
+<button class='btn btn-primary' {{action 'searchStudies' phase}}> Search </button>
