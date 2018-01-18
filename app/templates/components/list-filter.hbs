@@ -1,6 +1,6 @@
 {{!-- {{input value=value key-up=(action 'handleFilterEntry') class="light"placeholder="Filter By Phase"}} --}}
 
-{{#power-select-multiple options=phasesOptions selected=selectedPhases placeholder="Filter by Phase" onchange=(action (mut selectedPhases )) as |phase|}}
+{{#power-select-multiple options=search.phaseOptions selected=search.selectedPhases placeholder="Filter by Phase" onchange=(action (mut search.selectedPhases )) as |phase|}}
   {{phase}}
 {{/power-select-multiple}}
 <button class='btn btn-primary' {{action 'searchStudies' }}> Search </button>

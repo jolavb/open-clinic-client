@@ -1,3 +1,7 @@
 <div class='search'>
-  {{search-form phases=phases searchStudies='searchStudies'}}
+  {{#power-select-multiple options=model.phaseOptions selected=model.selectedPhases placeholder="Filter by Phase" onchange=(action (mut model.selectedPhases )) as |phase|}}
+    {{phase}}
+  {{/power-select-multiple}}
+  <button class='btn btn-primary' {{action 'searchStudies' }}> Search </button>
+    {{search}}
 </div>
