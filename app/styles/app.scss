@@ -71,6 +71,17 @@ textarea {
   }
 }
 
+.navbar-default {
+  background-image: linear-gradient(to bottom, #508bc1 0%, #285d8c 100%);
+}
+
+.navbar-default .navbar-brand {
+    color: #f9f9f9;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #f9f9f9;
+}
+
 
 $ember-power-select-multiple-selection-background-color: #009688 !default;
 $ember-power-select-multiple-selection-color: #ffffff !default

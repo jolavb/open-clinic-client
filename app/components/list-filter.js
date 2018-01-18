@@ -6,13 +6,17 @@ export default Ember.Component.extend({
   classNames: ['list-filter'],
   selectedPhases: null,
   phasesOptions: ['Early Phase 1','Phase 1','Phase 1/Phase 2', 'Phase 2', 'Phase 2/Phase 3','Phase 3', 'Phase 4'],
-  init() {
+  didInsertElement() {
     this._super(...arguments);
-    if (this.get('search.selectedPhases') === true) {
-      console.log('true')
-    } else {
-      this.get('filter')('').then((results) => this.set('results', results));
+    let params = ''
+    let spinner = this.get('spinner')
+    spinner.show('uniq-123')
+    if (this.get('search.selectedPhases')) {
+      params = this.get('search.selectedPhases')
     }
+    this.get('filter')(params)
+      .then((results) => this.set('results', results))
+      .then(()=> spinner.hide('uniq-123'))
   },
   actions: {
     searchStudies() {
