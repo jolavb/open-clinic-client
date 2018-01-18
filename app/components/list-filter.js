@@ -8,7 +8,11 @@ export default Ember.Component.extend({
   phasesOptions: ['Early Phase 1','Phase 1','Phase 1/Phase 2', 'Phase 2', 'Phase 2/Phase 3','Phase 3', 'Phase 4'],
   init() {
     this._super(...arguments);
-    this.get('filter')(this.get('search.selectedPhases')).then((results) => this.set('results', results));
+    if (this.get('search.selectedPhases') === true) {
+      console.log('true')
+    } else {
+      this.get('filter')('').then((results) => this.set('results', results));
+    }
   },
   actions: {
     searchStudies() {
