@@ -1,6 +1,19 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+html, body, .search-container{
+  height: 100%;
+}
+
+.background{
+  background-size:contain;
+  background-repeat: no-repeat;
+  background: url('http://imfou.actioncom.fr/dbIMAGE/barriquand/hd/I_1442484025026.JPG');
+}
+
+
+
+
 .comment {
   position: relative;
   border: 1px solid grey;
@@ -47,11 +60,19 @@ textarea {
   width:20%;
 }
 
+.search-background {
+  height: 1000px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background: url('https://www.walldevil.com/wallpapers/a70/3751-wallpapers-abstract-hqcyber-gallery.jpg');
+}
+
 .search{
+  top: 25%;
   width: 40%;
   position: relative;
   margin: 0 auto;
-  > .ember-view button {
+  > button {
     width: 100%;
   }
 }
