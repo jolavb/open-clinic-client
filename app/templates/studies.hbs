@@ -1,13 +1,15 @@
-{{search-form phases=phases searchStudies='searchStudies'}}
+{{!-- {{search-form phases=phases searchStudies='searchStudies'}} --}}
 
 <h1> Studies </h1>
+{{#list-filter filter=(action 'filterByPhase') as |filteredStudies|}}
 <table class='table table-striped'>
   <tbody class='table-striped'>
-{{#each model as |study|}}
-  <tr>
-    <td> {{study.officialTitle}} </td>
-    <td> {{#link-to 'study' study (query-params phase=phase)}}Details{{/link-to}} </td>
-  </tr>
-{{/each}}
+    {{#each filteredStudies as |study|}}
+    <tr>
+      <td> {{study.officialTitle}} </td>
+      <td> {{#link-to 'study' study}}Details{{/link-to}} </td>
+    </tr>
+    {{/each}}
   </tbody>
 </table>
+{{/list-filter}}
