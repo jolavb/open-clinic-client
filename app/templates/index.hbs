@@ -2,10 +2,10 @@
 
 
 <div class='search-background'>
-
   <div class='search'>
     <h1> OpenClinical</h1>
-    {{#power-select-multiple options=model.phaseOptions selected=model.selectedPhases placeholder="Filter by Phase" onchange=(action (mut model.selectedPhases )) as |phase|}}
+    <h4>Search Public Clinical Trial Data</h4>
+    {{#power-select-multiple options=model.phaseOptions selected=model.selectedPhases placeholder="All Phases" onchange=(action (mut model.selectedPhases )) as |phase|}}
       {{phase}}
     {{/power-select-multiple}}
     <button class='btn btn-primary' {{action 'searchStudies' }}> Search </button>

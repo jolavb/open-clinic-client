@@ -1,5 +1,7 @@
 {{!-- study route hbs --}}
+<div class='records'>
 {{#link-to 'studies'}}&#8592; Return to Studies {{/link-to}}
 {{study-components/study study=model}}
 {{study.briefTitle}}
 {{study-components/comments study=model editComment= 'editComment' newComment='newComment' deleteComment='deleteComment'}}
+</div>

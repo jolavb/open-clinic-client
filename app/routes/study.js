@@ -8,8 +8,8 @@ export default Ember.Route.extend({
   },
   actions: {
     newComment(comment){
-      if(Ember.isEmpty(comment.text)) {
-        this.get('flashMessages').warning('You forgot to write anything!');
+      if(Ember.isBlank(comment.text)) {
+        this.get('flashMessages').warning('You forgot to write something!');
       } else {
         let newComment = this.get('store').createRecord('comment', comment);
         newComment.save();
