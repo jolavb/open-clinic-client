@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   actions: {
     filterByPhase(param) {
       if (param !== '') {
-        return this.get('store').query('study', { phase: param.selectedPhases });
+        return this.get('store').query('study', { phase: param.selectedPhases, officialTitle: param.officialTitle });
       } else {
         return this.get('store').findAll('study');
       }

@@ -1,5 +1,5 @@
 {{!-- {{input value=value key-up=(action 'handleFilterEntry') class="light"placeholder="Filter By Phase"}} --}}
-{{input value=search.filter.title placeholder='Filter by Title'}}
+{{input value=search.filter.officialTitle placeholder='Filter by Title'}}
 {{#power-select-multiple options=search.phaseOptions selected=search.filter.selectedPhases placeholder="Filter by Phase" onchange=(action (mut search.filter.selectedPhases )) as |phase|}}
   {{phase}}
 {{/power-select-multiple}}
