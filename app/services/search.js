@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   filter: {
-      title: null,
+      officialTitle: null,
       selectedPhases: null
   },
   title: null,
