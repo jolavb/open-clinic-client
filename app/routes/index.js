@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   classNames: ['test'],
   search: Ember.inject.service(),
   model() {
-    return  this.get('search')
+    return  this.get('search');
   },
   actions: {
     searchStudies() {

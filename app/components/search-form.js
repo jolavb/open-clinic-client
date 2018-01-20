@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   selectedPhases: null,
    actions: {
      searchStudies(selectedPhases) {
-       this.get('search').searchPhases(selectedPhases)
+       this.get('search').searchPhases(selectedPhases);
      },
    },
 });
