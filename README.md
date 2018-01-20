@@ -9,6 +9,12 @@ by phase, view trial information as well as comment on a specific trial.
 ## Rails API for Open-Clinic-Client:
 [Open-Clinic-API](https://github.com/jolavb/open-clinic-api)
 
+
+## ScreenShots:
+![search page](https://i.imgur.com/PBW7yoc.png)
+![study view](https://i.imgur.com/n2jSWpl.png)
+
+
 ## Deployed Open-Clinic WebSite:
 [Live](https://jolavb.github.io/open-clinic-client)
 
