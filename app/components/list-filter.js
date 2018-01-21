@@ -11,8 +11,8 @@ export default Ember.Component.extend({
     let params = '';
     let spinner = this.get('spinner');
     spinner.show('uniq-123');
-    if (this.get('search.selectedPhases')) {
-      params = this.get('search.selectedPhases');
+    if (this.get('search.filter')) {
+      params = this.get('search.filter');
     }
     this.get('filter')(params)
       .then((results) => this.set('results', results))
