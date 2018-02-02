@@ -14,6 +14,7 @@ export default Ember.Component.extend({
     if (this.get('search.filter')) {
       params = this.get('search.filter');
     }
+    // passes current search params to studies controller action
     this.get('filter')(params)
       .then((results) => this.set('results', results))
       .then(()=> spinner.hide('uniq-123'));

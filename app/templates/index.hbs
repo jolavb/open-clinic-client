@@ -3,10 +3,17 @@
   <div class='search'>
     <h1> OpenClinical</h1>
     <h4>Search Public Clinical Trial Data</h4>
-    {{input value=model.filter.officialTitle placeholder='Search By Title'}}
-    {{#power-select-multiple options=model.phaseOptions selected=model.filter.selectedPhases placeholder="All Phases" onchange=(action (mut model.filter.selectedPhases )) as |phase|}}
+
+    {{!-- input value refers to stored value of search service --}}
+    {{input value=model.filter.officialTitle placeholder="Search By Trial Title"}}
+    {{!-- input options refer to search service default phaseOptions,
+    selected = search service stored selected values,
+    on changes, updates the stored search service selectedPhases values --}}
+    {{#power-select-multiple options=model.phaseOptions selected=model.filter.selectedPhases placeholder="   Search By Phase" onchange=(action (mut model.filter.selectedPhases )) as |phase|}}
       {{phase}}
     {{/power-select-multiple}}
+
+    {{!-- On search, triggers transition to studies route, which resolves a promise --}}
     <button class='btn btn-primary' {{action 'searchStudies' }}> Search </button>
       {{search}}
     </div>

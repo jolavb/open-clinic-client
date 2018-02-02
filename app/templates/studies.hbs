@@ -1,7 +1,8 @@
 
 <div class='records'>
 <h1> Studies </h1>
-{{!-- list filter in 'block form' --}}
+{{!-- renders list-filter component, which yeilds all filtered studies --}}
+{{!-- filter is the filterByPhase action in studies controller --}}
 {{#list-filter filter=(action 'filterByPhase') as |filteredStudies|}}
 <table class='table table-striped'>
   <tbody class='table-striped'>
