@@ -1,9 +1,7 @@
 
-<div class='search-background'>
   <div class='search'>
     <h1> OpenClinical</h1>
     <h4>Search Public Clinical Trial Data</h4>
-
     {{!-- input value refers to stored value of search service --}}
     {{input value=model.filter.officialTitle placeholder="Search By Trial Title"}}
     {{!-- input options refer to search service default phaseOptions,
@@ -17,4 +15,3 @@
     <button class='btn btn-primary' {{action 'searchStudies' }}> Search </button>
       {{search}}
     </div>
-</div>
