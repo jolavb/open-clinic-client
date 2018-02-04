@@ -1,8 +1,10 @@
 
 <div class='records'>
 <h1> Studies </h1>
+
 {{!-- renders list-filter component, which yeilds all filtered studies --}}
 {{!-- filter is the filterByPhase action in studies controller --}}
+
 {{#list-filter filter=(action 'filterByPhase') as |filteredStudies|}}
 <table class='table table-striped'>
   <tbody class='table-striped'>
@@ -15,4 +17,5 @@
   </tbody>
 </table>
 {{/list-filter}}
+
 </div>

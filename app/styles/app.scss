@@ -114,6 +114,19 @@ textarea {
     color: #f9f9f9;
 }
 
+// pagination
+
+.page-links {
+  text-align: center;
+}
+.page-results {
+  width: 200px;
+  margin: 0 auto;
+  > p {
+    margin: 0;
+  }
+}
+
 
 $ember-power-select-multiple-selection-background-color: #009688 !default;
 $ember-power-select-multiple-selection-color: #ffffff !default

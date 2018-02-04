@@ -6,7 +6,23 @@
 {{/power-select-multiple}}
 
 {{!-- triggers list-filter searchStudies action --}}
-<button class='btn btn-primary' {{action 'searchStudies' }}> Search </button>
+<button class='btn btn-primary' {{action 'searchStudies' true true}}> Search </button>
 
+<div class='page-links'>
+
+  <div class= 'page-results'>
+      {{#power-select searchEnabled=false options=search.perPage selected=search.filter.per_page onchange= (action (mut search.filter.per_page )) as |pagesize|}}
+        {{pagesize}}
+      {{/power-select}}
+    </div>
+  <button {{action 'previous' }}> Previous </button>
+
+    {{#each nextTenPages as |page|}}
+      <button {{action 'pageLink' page }}> {{page}} </button>
+    {{/each}}
+  <button  {{action 'next' }}> Next </button>
+  <p> Page {{search.filter.page}} of {{totalPages}} </p>
+
+</div>
 
 {{yield results}}
