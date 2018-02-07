@@ -1,0 +1,17 @@
+<div class='records'>
+<h1> Search By Sponsor</h1>
+
+
+<table class='table table-striped'>
+  <tbody class='table-striped'>
+    {{#each model as |sponsor|}}
+      <tr>
+        <td> {{sponsor.name}} </td>
+        <td>{{#link-to 'u-sponsor' sponsor}} Explore {{sponsor.studycount}} Studies {{/link-to}}</td>
+      </tr>
+
+      {{/each}}
+  </tbody>
+</table>
+
+</div>

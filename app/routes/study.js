@@ -7,6 +7,9 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('study', params.study_id);
   },
   actions: {
+    back () {
+      history.back()
+    },
     newComment(comment){
       if(Ember.isBlank(comment.text)) {
         this.get('flashMessages').warning('You forgot to write something!');

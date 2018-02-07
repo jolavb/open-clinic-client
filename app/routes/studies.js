@@ -3,7 +3,8 @@ import RSVP from 'rsvp';
 
 export default Ember.Route.extend({
   model() {
-    return RSVP.Promise.resolve({});
+    return this.get('store').findAll('study')
+    // return RSVP.Promise.resolve({});
   }
 
 });
