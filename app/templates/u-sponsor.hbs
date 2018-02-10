@@ -1,9 +1,11 @@
 <div class='records'>
 <button class='btn btn-default' {{action 'back'}}>&#8592; Back to Sponsors </button>
 <h1> {{model.name}}</h1>
+<p> {{model.studycount}} Study Records Found</p>
 {{sponsor-vis studies=model}}
 
 
+{{!--
 <table class='table table-striped'>
   <tbody class='table-striped'>
     {{#each model.studies as |study|}}
@@ -11,9 +13,8 @@
         <td> {{study.officialTitle}}</td>
         <td>{{#link-to 'study' study}} Details {{/link-to}}</td>
       </tr>
-
       {{/each}}
   </tbody>
-</table>
+</table> --}}
 
 </div>
