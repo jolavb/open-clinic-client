@@ -1,10 +1,16 @@
 import Ember from 'ember';
 
+
 export default Ember.Controller.extend({
   queryParams: ["page", "perPage", "officialTitle", "selectedPhases" ],
   officialTitle: "All",
   phaseOptions: ['Early Phase 1','Phase 1','Phase 1/Phase 2', 'Phase 2', 'Phase 2/Phase 3','Phase 3', 'Phase 4'],
   selectedPhases: "All",
+  //
+  // pageBinding: "content.page",
+  page: 1,
+  // perPage: Ember.computed.alias("content.perPage"),
+  // totalPages: Ember.computed.alias("content.totalPages"),
 
   actions: {
     searchStudies(title,selectedPhase) {
@@ -16,6 +22,10 @@ export default Ember.Controller.extend({
       }
 
       this.setProperties({officialTitle: title, selectedPhases: selectedPhase})
+    },
+    setPage() {
+      let page = this.get('content.page')
+      this.set('page', page )
     }
   }
 });
