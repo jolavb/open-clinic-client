@@ -3,7 +3,7 @@
 <h1> Studies </h1>
 {{input placeholder='Search By Title' value=title}}
 
-{{#power-select-multiple options=phaseOptions selected=phaseSelect placeholder=" Filter by Phase" onchange=(action (mut phaseSelect )) as |phase|}}
+{{#power-select-multiple options=phaseOptions selected=phaseSelect placeholder="   Filter by Phase" onchange=(action (mut phaseSelect )) as |phase|}}
   {{phase}}
 {{/power-select-multiple}}
 
@@ -14,7 +14,7 @@
   <tbody>
   {{#each model as |study|}}
   <tr>
-    <td> {{study.officialTitle}}</td>
+    <td> {{check-title study.officialTitle study.id}}</td>
     <td> {{#link-to 'study' study.id}}View{{/link-to}} </td>
   </tr>
 {{/each}}
