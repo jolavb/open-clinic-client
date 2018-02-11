@@ -21,6 +21,9 @@ export default Ember.Route.extend({
     editComment(comment) {
       comment.save();
     },
+    back() {
+      this.transitionTo('studies')
+    }
 
   }
 });
