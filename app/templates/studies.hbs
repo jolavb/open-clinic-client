@@ -1,21 +1,27 @@
 
 <div class='records'>
 <h1> Studies </h1>
+{{input placeholder='Search By Title' value=title}}
 
-{{!-- renders list-filter component, which yeilds all filtered studies --}}
-{{!-- filter is the filterByPhase action in studies controller --}}
+{{#power-select-multiple options=phaseOptions selected=phaseSelect placeholder=" Filter by Phase" onchange=(action (mut phaseSelect )) as |phase|}}
+  {{phase}}
+{{/power-select-multiple}}
 
-{{#list-filter filter=(action 'filterByPhase') as |filteredStudies|}}
-<table class='table table-striped'>
-  <tbody class='table-striped'>
-    {{#each filteredStudies as |study|}}
-    <tr>
-      <td> {{study.officialTitle}} </td>
-      <td> {{#link-to 'study' study}}Details{{/link-to}} </td>
-    </tr>
-    {{/each}}
-  </tbody>
+
+<button class='btn btn-primary' {{action 'searchStudies' title phaseSelect }}> Search</button>
+
+<table>
+  {{#each model as |study|}}
+  <tr>
+    <td> {{study.officialTitle}}</td>
+    <td> {{#link-to 'study' study.id}} View {{/link-to}} </td>
+  </tr>
+{{/each}}
+
 </table>
-{{/list-filter}}
+
+
+{{page-numbers content=content}}
+
 
 </div>
