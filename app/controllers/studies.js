@@ -26,6 +26,9 @@ export default Ember.Controller.extend({
     setPage() {
       let page = this.get('content.page')
       this.set('page', page )
+    },
+    clear() {
+        this.setProperties({officialTitle: 'All', selectedPhases: 'All', page: 1, title:'', phaseSelect: ''})
     }
   }
 });
