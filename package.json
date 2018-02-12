@@ -49,18 +49,22 @@
     "ember-local-storage": "^1.3.3",
     "ember-power-select": "^2.0.0-beta.0",
     "ember-resolver": "^2.1.0",
+    "fire": "^0.55.1",
     "grunt": "^1.0.1",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-jscs": "^3.0.1",
     "grunt-jsonlint": "^1.1.0",
     "grunt-shell": "^2.1.0",
+    "liquid": "^1.2.1",
+    "liquid-fire": "^0.29.1",
     "load-grunt-config": "^0.19.2",
     "loader.js": "^4.1.0",
     "time-grunt": "^1.4.0"
   },
   "dependencies": {
     "bootstrap-select": "^1.12.4",
+    "elegant-icons-sass": "^0.7.0",
     "ember-bootstrap-select": "^0.1.2",
     "ember-cli-spinner": "0.0.9"
   }

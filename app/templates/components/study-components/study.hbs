@@ -10,51 +10,51 @@
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td>{{study.studyType}}</td>
+      <td>{{validate-exists study.studyType}}</td>
     </tr>
     <tr>
       <th scope="row">Phase</th>
-      <td>{{study.phase}}</td>
+      <td>{{validate-exists study.phase}}</td>
     </tr>
     <tr>
       <th scope="row">Status</th>
-      <td>{{study.overallStatus}}</td>
+      <td>{{validate-exists study.overallStatus}}</td>
     </tr>
     <tr>
       <th scope="row">Enrollment</th>
-      <td>{{study.enrollment}}</td>
+      <td>{{validate-exists study.enrollment}}</td>
     </tr>
     <tr>
       <th scope="row">Enrollment Type</th>
-      <td>{{study.enrollmentType}}</td>
+      <td>{{validate-exists study.enrollmentType}}</td>
     </tr>
     <tr>
       <th scope="row">Source</th>
-      <td>{{study.source}}</td>
+      <td>{{validate-exists study.source}}</td>
     </tr>
     <tr>
       <th scope="row">FDA Regulated Drug</th>
-      <td>{{study.isFdaRegulatedDrug}}</td>
+      <td>{{validate-exists study.isFdaRegulatedDrug}}</td>
     </tr>
     <tr>
       <th scope="row">FDA Regulated Device</th>
-      <td>{{study.isFdaRegulatedDevice}}</td>
+      <td>{{validate-exists study.isFdaRegulatedDevice}}</td>
     </tr>
     <tr>
       <th scope="row">Target Duration</th>
-      <td>{{study.targetDuration}}</td>
+      <td>{{validate-exists study.targetDuration}}</td>
     </tr>
     <tr>
       <th scope="row">Primary Completion Date</th>
-      <td>{{study.primaryCompletionDate}}</td>
+      <td>{{validate-exists study.primaryCompletionDate}}</td>
     </tr>
     <tr>
       <th scope="row">Baseline Population</th>
-      <td>{{study.baselinePopulation}}</td>
+      <td>{{validate-exists study.baselinePopulation}}</td>
     </tr>
     <tr>
       <th scope="row">Processed</th>
-      <td>{{study.nlmDownloadDateDescription}}</td>
+      <td>{{validate-exists study.nlmDownloadDateDescription}}</td>
     </tr>
   </tbody>
 </table>
@@ -70,23 +70,23 @@
   <tbody>
     <tr>
       <th scope="row">Name</th>
-      <td>{{party.name}}</td>
+      <td>{{validate-exists party.name}}</td>
     </tr>
     <tr>
       <th scope="row">Party Type</th>
-      <td>{{party.responsiblePartyType}}</td>
+      <td>{{validate-exists party.responsiblePartyType}}</td>
     </tr>
     <tr>
       <th scope="row">Title</th>
-      <td>{{party.title}}</td>
+      <td>{{validate-exists party.title}}</td>
     </tr>
     <tr>
       <th scope="row">Organization</th>
-      <td>{{party.organization}}</td>
+      <td>{{validate-exists party.organization}}</td>
     </tr>
     <tr>
       <th scope="row">Affiliation</th>
-      <td>{{party.affiliation}}</td>
+      <td>{{validate-exists party.affiliation}}</td>
     </tr>
   </tbody>
 </table>
@@ -108,8 +108,8 @@
   {{#each study.sponsors as |sponsor|}}
     <tr>
       <th scope="row">{{sponsor.name}}</th>
-      <td>{{sponsor.agencyClass}}</td>
-      <td>{{sponsor.leadOrCollaborator}}</td>
+      <td>{{validate-exists sponsor.agencyClass}}</td>
+      <td>{{validate-exists sponsor.leadOrCollaborator}}</td>
     </tr>
   {{/each}}
   </tbody>

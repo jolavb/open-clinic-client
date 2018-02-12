@@ -1,8 +1,39 @@
+@import 'node_modules/elegant-icons-sass/scss/elegant-icons-sass';
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import url('https://fonts.googleapis.com/css?family=Lora');
 
+$ei-generate-classes: true;
+
+// general
 html, body, .search-container{
   height: 100%;
+}
+
+p, h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+}
+
+// index
+
+.banner {
+  height: 250px;
+  background: #009688;
+}
+
+.search{
+  top: 25%;
+  width: 30%;
+  position: relative;
+  margin: 0 auto;
+  > button {
+    width: 50%;
+    @include elegant-icon('icon_search');
+  }
+  > h1, p{
+    color: white;
+  }
+
 }
 
 .background{
@@ -10,8 +41,6 @@ html, body, .search-container{
   background-repeat: no-repeat;
   background: url('http://imfou.actioncom.fr/dbIMAGE/barriquand/hd/I_1442484025026.JPG');
 }
-
-
 
 
 .comment {
@@ -72,16 +101,6 @@ textarea {
   padding-bottom: 5%;
 }
 
-.search{
-  background: rgba(255, 255, 255, 0.33);
-  top: 25%;
-  width: 40%;
-  position: relative;
-  margin: 0 auto;
-  > button {
-    width: 100%;
-  }
-}
 
 .user-form {
   margin: 0 auto;
