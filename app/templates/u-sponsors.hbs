@@ -1,0 +1,22 @@
+<div class='records'>
+<h1> Search By Sponsor</h1>
+
+{{input placeholder='Search By Sponsor' value=Usponsor}}
+<button class='btn btn-primary' {{action 'searchSponsors' Usponsor}}> Search </button>
+
+
+{{page-numbers content=content showFL=true}}
+
+<table class='table table-striped'>
+  <tbody class='table-striped'>
+    {{#each model as |sponsor|}}
+      <tr>
+        <td> {{sponsor.name}} </td>
+        <td>{{#link-to 'u-sponsor' sponsor.id}} View Trials Analysis {{/link-to}}</td>
+      </tr>
+      {{/each}}
+  </tbody>
+</table>
+
+
+</div>

@@ -5,4 +5,5 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   agencyClass: DS.attr('string'),
   leadOrCollaborator: DS.attr('string'),
+  USponsorId: DS.belongsTo('u-sponsor'),
 });
