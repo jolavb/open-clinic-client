@@ -9,4 +9,9 @@ export default function(){
       this.toRoute('studies'),
       this.use('toLeft'),
     );
+    this.transition(
+      this.fromRoute('u-sponsors'),
+      this.toRoute('u-sponsor'),
+      this.use('toLeft'),
+    );
 }
