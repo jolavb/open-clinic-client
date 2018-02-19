@@ -26,15 +26,9 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    let port = +('GA'.split('').reduce((p, c) =>
-      p + c.charCodeAt().toString(16), '')
-    );
-    ENV.apiHost = `http://localhost:${port}`;
+    ENV.rootURL = '/open-clinic-client';
+    ENV.locationType = 'hash';
+    ENV.apiHost = 'http://production.79uggubqnv.us-east-2.elasticbeanstalk.com';
   }
 
   if (environment === 'test') {
@@ -52,7 +46,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/open-clinic-client';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://frozen-mountain-71553.herokuapp.com';
+    ENV.apiHost = 'http://production.79uggubqnv.us-east-2.elasticbeanstalk.com';
   }
 
   return ENV;
