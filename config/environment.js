@@ -46,7 +46,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/open-clinic-client';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'http://production.79uggubqnv.us-east-2.elasticbeanstalk.com';
+    ENV.apiHost = 'https://openclinic.link';
   }
 
   return ENV;
